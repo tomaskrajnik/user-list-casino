@@ -391,9 +391,7 @@ function ActionButtons(props) {
   return (
     <div className="actionButtonsWrapper">
       <button className="actionButton addUser" onClick={(e) => addUser(e)}>Add user</button>
-      <button
-        className="actionButton deleteUser"
-        onClick={(e) => deleteUser(e, props)}>Delete user</button>
+      
     </div>
   )
 }

@@ -216,7 +216,7 @@
 }
 .addUser {
   background-color: #17ACA8;
-  margin-right: 15px;
+  
   transition: all .1s ease-in;
 }
 .addUser:hover {
@@ -363,4 +363,14 @@ justify-content: space-between;
 .actionButtonWrapper button[data-th]:hover {
   color: #fff;
   background-color: #3C424F;
+}
+ 
+
+@media all and (max-width: 400px) {
+  .header-wrapper {
+    display: block;
+  }
+  h1 {
+    font-size: 38px;
+  }
 }
