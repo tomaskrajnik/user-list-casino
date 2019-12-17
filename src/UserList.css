@@ -1,0 +1,366 @@
+@import "https://fonts.googleapis.com/css?family=Cabin:500,700&display=swap";
+
+
+
+
+.delete-img {
+  width: 18px;
+  cursor: pointer;
+}
+.category {
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+.category span:hover {
+  color: #F83D61;
+}
+.active-category {
+  color: #F83D61;
+}
+
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px;
+  
+}
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.rwd-table th {
+  display: none;
+}
+.rwd-table td {
+  display: block;
+}
+.rwd-table td:first-child {
+  padding-top: 0.5em;
+}
+.rwd-table td:last-child {
+  padding-bottom: 0.5em;
+}
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+@media (min-width: 480px) {
+  .rwd-table td:before {
+    display: none;
+  }
+}
+.rwd-table th,
+.rwd-table td {
+  text-align: left;
+}
+@media (min-width: 480px) {
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+}
+
+
+.rwd-table {
+  background: #3C424F;
+  color: #fff;
+  border-radius: 0.4em;
+  overflow: hidden;
+  width: 100%;
+  
+}
+.rwd-table tr {
+  border-color: #46637f;
+}
+.rwd-table th,
+.rwd-table td {
+  margin: 0.5em 1em;
+}
+@media (min-width: 480px) {
+  .rwd-table th,
+  .rwd-table td {
+    padding: 1em !important;
+  }
+}
+.rwd-table th,
+.rwd-table td:before {
+  color: #dd5;
+}
+.rwd-table {
+  border: none;
+  padding: 0;
+  border-spacing: 0px;
+  
+}
+
+.rwd-table thead {
+  font-weight: 700;
+}
+.rwd-table tbody {
+  background: #fff;
+  color:#46637f;
+  border: none;
+}
+.checkbox-td {
+  width: 40px;
+}
+.checkmark-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkmark-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border-radius: 2px;
+  background-color: #46637f34;
+}
+
+
+.checkmark-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.checkmark-container input:checked ~ .checkmark {
+  background-color: #F83D61;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.checkmark-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.checkmark-container .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actionButton {
+  width: 130px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: 0;
+  border: none;
+  color: #fff;
+  padding: 12px 40px 12px 15px;
+  font-size: 14px;
+  position: relative;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.deleteUser {
+  background-color: #F73C61;
+  transition: all .1s ease-in;
+}
+.deleteUser:hover {
+  background-color: rgb(230, 30, 70);
+}
+.deleteUser::after {
+  content: "-";
+  font-size: 24px;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-53%);
+}
+.addUser {
+  background-color: #17ACA8;
+  margin-right: 15px;
+  transition: all .1s ease-in;
+}
+.addUser:hover {
+  background-color: rgb(13, 145, 140);
+}
+.addUser::after {
+  content: "+";
+  font-size: 24px;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-53%);
+}
+.closeModal {
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.closeModalSectionVisible {
+  display: block;
+}
+.addUserModal {
+  position: fixed;
+  
+  background-color: #fff;
+  width: 30%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  z-index: 999;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),
+                0 4px 6px -2px rgba(0,0,0,.05);
+   padding:6rem 4rem;     
+   align-content: center;   
+   border-top: 8px solid #17ACA8;  
+   
+   transition: all .2s ease-in;   
+}
+.addUserHeadingWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.user-icon {
+  width: 19px;
+  height: auto;
+  margin-right: .8rem;
+  margin-bottom: .7rem;
+}
+.close-modal-img {
+  position: absolute;
+  width: 20px;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+}
+.addUserModal h1 {
+  font-size: 1.8rem;
+}
+.modal-visible {
+  transform: translateX(0);
+}
+.addUserForm {
+  margin-top: 2rem;
+  
+}
+.addUserForm > *{
+display: block;
+}
+.addUserForm input {
+ 
+  width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.addUserForm div {
+  width: 100%;
+  text-align: right;
+}
+input[type=submit] {
+  width: 130px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: 0;
+  border: none;
+  color: #fff;
+  padding: 12px 15px;
+  font-size: 14px;
+  position: relative;
+  font-weight: 500;
+  margin-top: 10px;
+  background-color: #17ACA8;
+  margin-top: 20px;
+  transition: all .1s ease-in;
+}
+input[type=submit]:hover {
+  background-color: rgb(13, 145, 140);
+}
+
+.actionButtonWrapper {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+.actionButtonWrapper div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+}
+.actionButtonWrapper h4 {
+  color: #3C424F;
+  margin-right: 1rem;
+}
+.actionButtonWrapper button[data-th] {
+  width: 130px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: 0;
+  border: none;
+  color: #3C424F;
+  padding: 12px 15px 12px 15px;
+  font-size: 14px;
+  
+  font-weight: 500;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  transition: all .2s ease-in;
+}
+.actionButtonWrapper button[data-th]:not(:last-of-type) {
+  margin-right: .5rem;
+}
+.actionButtonWrapper button[data-th]:hover {
+  color: #fff;
+  background-color: #3C424F;
+}
